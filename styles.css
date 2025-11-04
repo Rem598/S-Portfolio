@@ -1,184 +1,126 @@
-/* General styling */
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background-color: white; 
+  box-sizing: border-box;
 }
 
-
-/* Base styling for hexagons */
-.background-shape {
-  position: absolute;
-  opacity: 0.1; /* Adjust for subtle appearance */
-  pointer-events: none; 
-  animation: float 12s ease-in-out infinite alternate;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e0036, #2d003e);
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
-
-.hexagon {
-  width: 150px; 
-  height: 150px;
-  background-color: #facca7; 
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-}
-
-
-.hexagon-1 {
-  top: 10%;
-  left: 15%;
-  animation-delay: 0s; 
-}
-.hexagon-2 {
-  top: 30%;
-  left: 60%;
-  animation-delay: 2s;
-}
-
-.hexagon-3 {
-  top: 70%;
-  left: 20%;
-  animation-delay: 4s;
-}
-
-.hexagon-4 {
-  top: 50%;
-  left: 80%;
-  animation-delay: 6s;
-}
-
-/* Subtle floating animation */
-@keyframes float {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(15px, 15px); 
-  }
-}
-
 
 nav {
-  background-color: rgb(67, 160, 197);;
-  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  padding: 1em 2em;
+  z-index: 10;
 }
 
 nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2em;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 15px;
-}
-
-nav ul li a {
-  color: #fff;
+nav a {
+  color: #eee;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.section {
-  padding: 20px;
-  margin: 30px;
+nav a:hover {
+  color: #ffb3ff;
 }
 
-.profile-pic img {
-  max-width: 150px;
+section {
+  padding: 4em 2em;
+  text-align: center;
+  position: relative;
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1em;
+  border: 3px solid #fff;
+}
+
+.about-text {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .skills-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1.5em;
 }
 
-.skill-box {
-  background-color: rgb(22, 177, 216);
-  color: #fff;
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
+.skills-container div {
+  background: #9a8c98;
+  padding: 0.7em 1.2em;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0 0 8px #bb86fc;
 }
 
-.project-boxes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 2em;
 }
 
-.project-box {
-  background-color: #ece4e4;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1em;
+  max-width: 250px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(186, 104, 200, 0.4);
 }
 
-.project-box:hover {
-  transform: translateY(-10px); /* Lift the box on hover */
+.project-card:hover {
+  transform: scale(1.05);
 }
 
-.project-box img {
+.project-card img {
   width: 100%;
-  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1em;
 }
 
-.project-content {
-  padding: 15px;
+.project-card h3 {
+  margin: 0.5em 0;
+  color: #ffe3ff;
 }
 
-.project-content h3 {
-  font-size: 1.2em;
-  margin: 10px 0;
-}
-
-.project-content p {
-  font-size: 1em;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-/* Background Shapes */
-#projects::before, #projects::after {
-  content: '';
-  position: absolute;
-  z-index: -1; /* Keep shapes behind the content */
-  opacity: 0.15;
-  border-radius: 50%;
-}
-
-#projects::before {
-  width: 200px;
-  height: 200px;
-  background-color: #ff8000;
-  top: -50px;
-  left: -50px;
-}
-
-#projects::after {
-  width: 300px;
-  height: 300px;
-  background-color: #333;
-  bottom: -75px;
-  right: -75px;
-}
-
-.button {
+.project-card a {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: rgb(109, 79, 14);
-  color: #fff
-}
-.button:hover{
-  background-color: darkorange;
+  margin-top: 1em;
+  color: #fff;
+  background-color: #9a8c98;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-footer{
-  background-color:rgb(67, 160, 197);
-  padding:20px;
-  margin:auto;
-  padding: 30px;
-  color: white;
+footer {
+  background: #1a1a2e;
+  padding: 1em;
+  text-align: center;
+  font-size: 0.9em;
+  color: #aaa;
 }

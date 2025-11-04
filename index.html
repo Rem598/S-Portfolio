@@ -1,115 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rehema Kemunto's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rehema Kemunto's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
+  <section id="about">
+    <img src="picture.jpg" alt="Rehema's Photo" class="profile-img" />
+    <div class="about-text">
+      <h1>About Me</h1>
+      <p>I'm <strong>Rehema Kemunto</strong>, a developer with skills in Python, JavaScript, HTML, CSS, and data-driven web applications.</p>
+      <p>I enjoy solving real-world problems and building projects  that are fun and  have a positive impact.</p>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h1>About Me</h1>
-        <div class="about-container">
-        <div class="profile-pic">
-            <img src="picture.jpg" alt="Your Name">
-        </div>
-        <div class="about-card">
-            <p>I'm Rehema Kemunto, a developer with skills in Python, Javascript, HTML, CSS and data-driven web applications.</p>
-            <p>I enjoy solving real-world problems and building projects that have a positive impact.</p>
-        </div>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div>HTML</div><div>CSS</div><div>JavaScript</div><div>Python</div><div>SQL</div><div>Django</div><div>R</div>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="skills-section">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skill-box">HTML</div>
-                <div class="skill-box">CSS</div>
-                <div class="skill-box">JavaScript</div>
-                <div class="skill-box">Python</div>
-                <div class="skill-box">SQL</div>
-                <div class="skill-box">Django</div>
-                <div class="skill-box">R</div>
-                
-                <!-- Add more skills as needed -->
-            </div>
-        </div>    
-    </section>
+  <section id="projects">
+    <h2>My Projects</h2>
+    <p>These are some of the projects I have worked on</p>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="farm produce Tracker.jpg" alt="Farm Produce Tracker" />
+        <h3>Farm Produce Tracker</h3>
+        <p>A website to help users track farm crops, yields and sales.</p>
+        <a href="https://github.com/Rem598/Farm_Produce_Tracker.git">View Project</a>
+      </div>
+      <div class="project-card">
+        <img src="budget.png" alt="Budget App" />
+        <h3>Budget App</h3>
+        <p>A simple web app that helps users manage income and expenses.</p>
+        <a href="https://rem598.github.io/Budget-app/">View Project</a>
+      </div>
+      <div class="project-card">
+        <img src="password.png" alt="Password Generator" />
+        <h3>Password Generator</h3>
+        <p>Generate strong passwords and save them securely.</p>
+        <a href="https://rem598.github.io/Password-Generator/">View Project</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h1>My Projects</h1>
-        <p> These are some of the projects i have worked on </p>
-        <div class ="project-boxes">
-        
-        
-        <div class = "project-box">
-            <img src="farm produce Tracker.jpg" alt="Farm Produce Tracker">
-            <div class="project-content"></div>
-            <h2>Farm Produce Tracker</h2>
-            <p>A website to help users track farm crops, yields and sales.</p>
-            <a href="https://github.com/Rem598/Farm_Produce_Tracker.git" class ="button">View Project</a>
-        </div>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Mail<a href="mailto:rehemakemunto40@gmail.com"></a></p>
+    <p>GitHub <a href="https://github.com/Rem598"></a></p>
+  </section>
 
-        <div class = "project-box">
-            <img src="budget.png" alt="Budget App">
-            <div class="project-content"></div>
-            <h2>Budget App</h2>
-            <p> The Budget App is a simple web application that helps users manage their income and expenses.</p>
-            <a href="https://rem598.github.io/Budget-app/" class ="button">View Project</a>
-        </div>
-
-        <div class = "project-box">
-            <img src="password.png" alt="Password Generator">
-            <div class="project-content"></div>
-            <h2>Password Generator</h2>
-            <p> The password generator is a simple web application that allows users to generate passwords and store them securely.</p>
-            <a href="https://rem598.github.io/Password-Generator/" class ="button">View Project</a>
-        </div>    
-
-        
-        
-        </div>
-    </section>       
-
-
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <p>Email: rehemakemunto40@gmail.com</p>
-        <p>Github: <a href="https://github.com/Rem598"> Github Link</a></p>
-    </section>
-
-    
-    <footer>
-        <p>&copy; 2024 Rehema Kemunto. All rights reserved.</p>
-    </footer>
-
-    <div class="background-shape hexagon hexagon-1"></div>
-    <div class="background-shape hexagon hexagon-2"></div>
-    <div class="background-shape hexagon hexagon-3"></div>
-    <div class="background-shape hexagon hexagon-4"></div>
-
-
-    
-
-    <script src="script.js"></script>
+  <footer>
+    <p>© 2024 Rehema Kemunto. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
